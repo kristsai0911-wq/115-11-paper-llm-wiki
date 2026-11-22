@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>平台商業模式入門：從基礎原理到三大實戰難題</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="deck-viewport">
+    <main class="deck-stage" id="deckStage" aria-label="平台商業模式入門教學簡報">
+
+      <!-- =================================================================
+           Slide 01｜版型 1：封面頁
+           ================================================================= -->
+      <section class="slide layout-cover glow-right is-active" data-title="封面｜平台商業模式入門" aria-hidden="false">
+        <div class="cover-top">
+          <div class="brand-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="3" stroke="#1B4965" stroke-width="2"/>
+              <circle cx="5" cy="6" r="2" fill="#3A85AC"/>
+              <circle cx="19" cy="6" r="2" fill="#3A85AC"/>
+              <circle cx="5" cy="18" r="2" fill="#62B6CB"/>
+              <circle cx="19" cy="18" r="2" fill="#62B6CB"/>
+              <line x1="6.7" y1="7.4" x2="9.8" y2="10.1" stroke="#1B4965" stroke-width="1.5"/>
+              <line x1="17.3" y1="7.4" x2="14.2" y2="10.1" stroke="#1B4965" stroke-width="1.5"/>
+              <line x1="6.7" y1="16.6" x2="9.8" y2="13.9" stroke="#1B4965" stroke-width="1.5"/>
+              <line x1="17.3" y1="16.6" x2="14.2" y2="13.9" stroke="#1B4965" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <span class="course-label">TAICA 生成式 AI × 平台商業模式 LLM Wiki 教學簡報</span>
+        </div>
+
+        <div class="cover-grid">
+          <div>
+            <h1 class="cover-title">
+              平台商業模式入門
+              <span class="title-accent">從基礎原理到三大實戰難題</span>
+            </h1>
+            <p class="cover-subtitle">
+              為什麼不蓋一間房的 Airbnb、不養一輛車的 Uber 能顛覆百年巨頭？<br>
+              從底層運作機制出發，透過 Linux、Marriott、Philips 三大真實商戰，一次看懂平台與生態系策略。
+            </p>
+          </div>
+
+          <div class="cover-visual" aria-hidden="true">
+            <svg width="390" height="390" viewBox="0 0 390 390" fill="none">
+              <circle cx="195" cy="195" r="168" stroke="#3A85AC" stroke-opacity="0.18" stroke-width="1.5" stroke-dasharray="6 6"/>
+              <circle cx="195" cy="195" r="118" stroke="#1B4965" stroke-opacity="0.22" stroke-width="1.5"/>
+              <circle cx="195" cy="195" r="68" fill="#BCD9E6" fill-opacity="0.55" stroke="#3A85AC" stroke-width="2"/>
+              <line x1="195" y1="195" x2="86" y2="88" stroke="#1B4965" stroke-opacity="0.35" stroke-width="1.8"/>
+              <line x1="195" y1="195" x2="314" y2="96" stroke="#1B4965" stroke-opacity="0.35" stroke-width="1.8"/>
+              <line x1="195" y1="195" x2="328" y2="246" stroke="#1B4965" stroke-opacity="0.35" stroke-width="1.8"/>
+              <line x1="195" y1="195" x2="108" y2="306" stroke="#1B4965" stroke-opacity="0.35" stroke-width="1.8"/>
+              <line x1="195" y1="195" x2="54" y2="195" stroke="#3A85AC" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <line x1="86" y1="88" x2="314" y2="96" stroke="#6BA3C2" stroke-opacity="0.32" stroke-width="1.2"/>
+              <line x1="314" y1="96" x2="328" y2="246" stroke="#6BA3C2" stroke-opacity="0.32" stroke-width="1.2"/>
+              <line x1="108" y1="306" x2="328" y2="246" stroke="#6BA3C2" stroke-opacity="0.32" stroke-width="1.2"/>
+
+              <!-- 外圍節點 -->
+              <circle cx="86" cy="88" r="24" fill="#FFFFFF" stroke="#3A85AC" stroke-width="2"/>
+              <text x="86" y="93" text-anchor="middle" fill="#1B4965" font-size="13" font-weight="800">開放</text>
+
+              <circle cx="314" cy="96" r="26" fill="#94BDD2" stroke="#1B4965" stroke-width="1.8"/>
+              <text x="314" y="101" text-anchor="middle" fill="#1B4965" font-size="13" font-weight="800">網路</text>
+
+              <circle cx="328" cy="246" r="24" fill="#6BA3C2" stroke="#1B4965" stroke-width="1.8"/>
+              <text x="328" y="251" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">治理</text>
+
+              <circle cx="108" cy="306" r="26" fill="#FFFFFF" stroke="#1B4965" stroke-width="2"/>
+              <text x="108" y="311" text-anchor="middle" fill="#1B4965" font-size="13" font-weight="800">生態系</text>
+
+              <circle cx="54" cy="195" r="14" fill="#BCD9E6" stroke="#3A85AC" stroke-width="1.5"/>
+
+              <!-- 核心樞紐 -->
+              <circle cx="195" cy="195" r="44" fill="#1B4965"/>
+              <text x="195" y="191" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">PLATFORM</text>
+              <text x="195" y="210" text-anchor="middle" fill="#BCD9E6" font-size="12" font-weight="700">核心互動</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="cover-meta">
+          <div class="cover-meta-item">
+            <span class="cover-meta-label">唯一知識來源</span>
+            <span class="cover-meta-val">LLM Wiki（7 來源頁＋13 概念頁＋3 個案頁）</span>
+          </div>
+          <div class="cover-meta-item">
+            <span class="cover-meta-label">閱讀導覽</span>
+            <span class="cover-meta-val">鍵盤 ← → 翻頁｜按 G 開啟目錄｜按 F 全螢幕</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           Slide 02｜版型 3：左引言＋右三階漸層色條清單頁（學習地圖）
+           ================================================================= -->
+      <section class="slide layout-three-bars glow-diag-tr" data-title="學習地圖｜從原理到三大實戰難題" aria-hidden="true">
+        <div class="bars-body">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span>ROADMAP 學習地圖</div>
+            <h2 class="slide-title">先懂底層原理，<br>再破解三大商戰難題</h2>
+            <p class="lead-copy">
+              平台商業模式不是死背名詞，而是在「規模、控制與夥伴關係」之間做取捨。
+            </p>
+            <div class="accent-quote">
+              接下來我們先用 <strong>4 頁</strong>快速打通平台基礎機制，再直接走進三場真實企業對決，看懂理論如何落地。
+            </div>
+          </div>
+
+          <div class="three-bars-stack">
+            <article class="step-bar tier-1">
+              <div class="step-badge">01</div>
+              <div>
+                <h3>難題一：平台該開放還是封閉？（Linux 2004）</h3>
+                <p>免費開源社群如何憑「市集模式」撼動伺服器市場？作業系統免費後，到底誰能賺到錢？封閉霸主又該怎麼反擊？</p>
+              </div>
+            </article>
+
+            <article class="step-bar tier-2">
+              <div class="step-badge">02</div>
+              <div>
+                <h3>難題二：當管道企業遇上平台競爭？（Marriott）</h3>
+                <p>全球最大飯店集團同時面對 OTA 高額抽成與 Airbnb 彈性房源夾擊，傳統龍頭該如何靠會員與生態反制而不打價格戰？</p>
+              </div>
+            </article>
+
+            <article class="step-bar tier-3">
+              <div class="step-badge">03</div>
+              <div>
+                <h3>難題三：多重生態系中的企業定位？（Philips HSDP）</h3>
+                <p>面對雲端巨頭、消費穿戴與醫院舊系統交錯，傳統醫材大廠該當盟主還是夥伴？如何算清生態系三大風險？</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="slide-footnote">來源：wiki/index.md、wiki/cases/linux-2004-open-vs-closed.md、marriott-pipeline-vs-platform.md、philips-healthsuite-multi-ecosystem.md</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 03｜版型 2：左編號文字＋右圓角視覺圖解頁（管道 vs. 平台）
+           ================================================================= -->
+      <section class="slide layout-split-diagram glow-diag-bl" data-title="基礎原理 01｜管道 vs. 平台與企業反轉" aria-hidden="true">
+        <div class="split-body">
+          <div class="split-left">
+            <div class="eyebrow"><span class="eyebrow-dot"></span>PART 1 平台基礎原理</div>
+            <h2 class="slide-title">管道 vs. 平台：<br>從單向輸送帶到雙向市集</h2>
+
+            <div class="num-points">
+              <div class="num-point">
+                <div class="big-num">01</div>
+                <div>
+                  <h3>線性管道（Pipeline）vs. 互動平台（Platform）</h3>
+                  <p>傳統管道自己設計、製造再賣給顧客；平台不囤貨也不自產商品，而是建立規則與工具，讓外部生產者與消費者直接媒合，近乎零邊際成本解鎖閒置資產。</p>
+                </div>
+              </div>
+
+              <div class="num-point">
+                <div class="big-num">02</div>
+                <div>
+                  <h3>企業反轉（Inversion of the Firm）</h3>
+                  <p>因價值主要由外部社群創造，企業重心全面由內轉外：營運從管自家庫存轉向協調外部夥伴，品管也由人工把關轉為社群評價回饋。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="diagram-card tint-blue">
+            <div class="diagram-caption">
+              <span>商業模式結構對照圖</span>
+              <span class="pill-tag">網絡協調者估值乘數 8.2x vs. 資產建構者 2.0x</span>
+            </div>
+            <svg class="diagram-svg" viewBox="0 0 600 430" fill="none" role="img" aria-label="管道與平台運作結構對照圖">
+              <defs>
+                <marker id="arrDark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0 1 L10 5 L0 9 Z" fill="#1B4965"/>
+                </marker>
+                <marker id="arrBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0 1 L10 5 L0 9 Z" fill="#3A85AC"/>
+                </marker>
+              </defs>
+
+              <!-- 上半：管道 -->
+              <rect x="12" y="10" width="576" height="148" rx="16" fill="#FFFFFF" stroke="#BCD9E6" stroke-width="1.5"/>
+              <text x="32" y="38" fill="#1B4965" font-size="15" font-weight="800">傳統管道（Pipeline）｜單向線性價值鏈</text>
+              <text x="568" y="38" text-anchor="end" fill="#5C8198" font-size="12" font-weight="700">自家庫存（Just-in-Time）</text>
+
+              <rect x="32" y="64" width="110" height="58" rx="12" fill="#BCD9E6"/>
+              <text x="87" y="98" text-anchor="middle" fill="#1B4965" font-size="14" font-weight="800">內部設計</text>
+
+              <line x1="146" y1="93" x2="170" y2="93" stroke="#1B4965" stroke-width="2" marker-end="url(#arrDark)"/>
+
+              <rect x="176" y="64" width="110" height="58" rx="12" fill="#94BDD2"/>
+              <text x="231" y="98" text-anchor="middle" fill="#1B4965" font-size="14" font-weight="800">自建生產</text>
+
+              <line x1="290" y1="93" x2="314" y2="93" stroke="#1B4965" stroke-width="2" marker-end="url(#arrDark)"/>
+
+              <rect x="320" y="64" width="110" height="58" rx="12" fill="#6BA3C2"/>
+              <text x="375" y="98" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="800">通路鋪貨</text>
+
+              <line x1="434" y1="93" x2="458" y2="93" stroke="#1B4965" stroke-width="2" marker-end="url(#arrDark)"/>
+
+              <rect x="464" y="64" width="104" height="58" rx="12" fill="#3A85AC"/>
+              <text x="516" y="98" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="800">終端顧客</text>
+
+              <text x="300" y="144" text-anchor="middle" fill="#5C8198" font-size="12">擴張需投入固定資產與人力，受限於人工守門人（Gatekeepers）</text>
+
+              <!-- 下半：平台 -->
+              <rect x="12" y="176" width="576" height="242" rx="16" fill="#FFFFFF" stroke="#3A85AC" stroke-width="1.8"/>
+              <text x="32" y="204" fill="#1B4965" font-size="15" font-weight="800">數位平台（Platform）｜雙向互動生態市集</text>
+              <text x="568" y="204" text-anchor="end" fill="#3A85AC" font-size="12" font-weight="700">外部閒置產能（Not-Even-Mine）</text>
+
+              <!-- 左：生產者 -->
+              <rect x="30" y="254" width="144" height="92" rx="14" fill="#BCD9E6" stroke="#3A85AC" stroke-width="1.5"/>
+              <text x="102" y="289" text-anchor="middle" fill="#1B4965" font-size="15" font-weight="800">外部生產者</text>
+              <text x="102" y="311" text-anchor="middle" fill="#3B647D" font-size="12">房東・司機・開發者</text>
+              <text x="102" y="330" text-anchor="middle" fill="#3B647D" font-size="12">供應商品與內容</text>
+
+              <!-- 中：平台樞紐 -->
+              <circle cx="300" cy="300" r="56" fill="#1B4965"/>
+              <text x="300" y="294" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">平台基礎設施</text>
+              <text x="300" y="314" text-anchor="middle" fill="#BCD9E6" font-size="12" font-weight="700">規則・工具・媒合</text>
+
+              <!-- 右：消費者 -->
+              <rect x="426" y="254" width="144" height="92" rx="14" fill="#3A85AC"/>
+              <text x="498" y="289" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">外部消費者</text>
+              <text x="498" y="311" text-anchor="middle" fill="#E6F2F7" font-size="12">房客・乘客・用戶</text>
+              <text x="498" y="330" text-anchor="middle" fill="#E6F2F7" font-size="12">搜尋並回饋評價</text>
+
+              <!-- 雙向連接箭頭 -->
+              <path d="M178 282 L238 282" stroke="#3A85AC" stroke-width="2.2" marker-end="url(#arrBlue)"/>
+              <path d="M238 318 L178 318" stroke="#1B4965" stroke-width="2.2" marker-end="url(#arrDark)"/>
+              <path d="M362 282 L420 282" stroke="#3A85AC" stroke-width="2.2" marker-end="url(#arrBlue)"/>
+              <path d="M420 318 L362 318" stroke="#1B4965" stroke-width="2.2" marker-end="url(#arrDark)"/>
+
+              <!-- 頂底回饋弧線 -->
+              <path d="M110 246 Q300 202 490 246" stroke="#62B6CB" stroke-width="1.8" stroke-dasharray="5 4" fill="none" marker-end="url(#arrBlue)"/>
+              <rect x="206" y="213" width="188" height="20" rx="10" fill="#FFFFFF"/>
+              <text x="300" y="227" text-anchor="middle" fill="#3A85AC" font-size="12" font-weight="700">商品・服務・資訊價值交換</text>
+
+              <path d="M490 354 Q300 398 110 354" stroke="#3A85AC" stroke-width="1.8" stroke-dasharray="5 4" fill="none" marker-end="url(#arrDark)"/>
+              <text x="300" y="396" text-anchor="middle" fill="#1B4965" font-size="12" font-weight="700">金流・注意力與社群評價回饋循環（取代人工品管）</text>
+            </svg>
+          </div>
+        </div>
+        <div class="slide-footnote">來源：wiki/concepts/pipeline-vs-platform.md；Parker, Van Alstyne &amp; Choudary (2016) Platform_Revolution.pdf, p.11–15, p.28</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 04｜版型 6：左引言＋右 2x2 漸層色塊卡片頁（網路效應）
+           ================================================================= -->
+      <section class="slide layout-grid-2x2 glow-diag-tr" data-title="基礎原理 02｜網路效應四象限與策展煞車" aria-hidden="true">
+        <div class="grid2x2-body">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span>PART 1 平台基礎原理</div>
+            <h2 class="slide-title">網路效應雙面刃：<br>人越多越好，還是越擠？</h2>
+            <p class="lead-copy">
+              <strong>網路效應（Network Effects）</strong>是「需求面規模經濟」：病毒效應負責把人拉進來，網路效應才負責讓用戶互相增值並留下來。
+            </p>
+            <div class="accent-quote">
+              <strong>關鍵解藥｜策展（Curation）</strong><br>
+              只衝人數不管品質會引爆負向雜訊（如垃圾廣告或配對失敗），必須靠演算法與規則過濾，轉化為數據驅動護城河。
+            </div>
+          </div>
+
+          <div class="cards-2x2">
+            <article class="quad-card q1">
+              <div>
+                <div class="quad-top">
+                  <span class="quad-num">01</span>
+                  <span class="quad-badge">正向・同邊</span>
+                </div>
+                <h3>正向同邊效應</h3>
+                <p>同一側用戶越多，彼此使用價值越高，呈現非線性滾雪球成長。</p>
+              </div>
+              <div class="quad-example">例：電話互打、Xbox 多人連線、PDF 格式</div>
+            </article>
+
+            <article class="quad-card q2">
+              <div>
+                <div class="quad-top">
+                  <span class="quad-num">02</span>
+                  <span class="quad-badge">負向・同邊</span>
+                </div>
+                <h3>負向同邊效應</h3>
+                <p>同一側參與者過度擁擠，導致惡性競價或搜尋配對困難。</p>
+              </div>
+              <div class="quad-example">例：Covisint 供應商過多致買賣難以配對</div>
+            </article>
+
+            <article class="quad-card q3">
+              <div>
+                <div class="quad-top">
+                  <span class="quad-num">03</span>
+                  <span class="quad-badge">正向・跨邊</span>
+                </div>
+                <h3>正向跨邊效應</h3>
+                <p>一側規模擴大直接造福另一側，是雙邊平台最強的成長引擎。</p>
+              </div>
+              <div class="quad-example">例：Uber 司機⇄乘客、Windows 開發者⇄用戶</div>
+            </article>
+
+            <article class="quad-card q4">
+              <div>
+                <div class="quad-top">
+                  <span class="quad-num">04</span>
+                  <span class="quad-badge">負向・跨邊</span>
+                </div>
+                <h3>負向跨邊效應</h3>
+                <p>一側數量失衡或品質失控，反而驅離另一側用戶造成雪崩。</p>
+              </div>
+              <div class="quad-example">例：過多推播廣告干擾用戶、司機空車率暴增</div>
+            </article>
+          </div>
+        </div>
+        <div class="slide-footnote">來源：wiki/concepts/network-effects.md；Parker et al. (2016) Platform_Revolution.pdf, p.19–27</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 05｜版型 5：全寬水平時間軸四欄頁（核心互動與建構四步驟）
+           ================================================================= -->
+      <section class="slide layout-horizontal-timeline glow-soft-edge" data-title="基礎原理 03｜核心互動與建構四步驟" aria-hidden="true">
+        <div class="h-header">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>PART 1 平台基礎原理</div>
+          <h2 class="slide-title-sm">平台怎麼蓋出來？從「核心互動」到建構四步驟</h2>
+          <div class="formula-pill">
+            <span>參與者（Participants）</span>
+            <span class="op">＋</span>
+            <span>價值單元（Value Unit）</span>
+            <span class="op">＋</span>
+            <span>過濾器（Filter）</span>
+            <span class="op">→</span>
+            <span class="strong-accent">核心互動（Core Interaction）</span>
+          </div>
+        </div>
+
+        <div class="h-timeline-track" aria-hidden="true">
+          <div class="h-node-wrap"><div class="h-node n1"></div></div>
+          <div class="h-node-wrap"><div class="h-node n2"></div></div>
+          <div class="h-node-wrap"><div class="h-node n3"></div></div>
+          <div class="h-node-wrap"><div class="h-node n4"></div></div>
+        </div>
+
+        <div class="h-columns">
+          <article class="h-col">
+            <div class="h-col-num">01.</div>
+            <h3>選擇市場邊</h3>
+            <p>精準界定誰是生產者與消費者，切忌初期同時連接過多邊導致過於複雜；先聚焦拉引（Pull）與核心交換。</p>
+            <div class="h-col-tag">警示：Brightcove 初期做 4 邊失敗</div>
+          </article>
+
+          <article class="h-col">
+            <div class="h-col-num">02.</div>
+            <h3>破解雞生蛋</h3>
+            <p>創新平台靠核心化（Coring）與自建首批應用；交易平台採單邊先攻或借力外部網路冷啟動。</p>
+            <div class="h-col-tag">例：Airbnb 借力 Craigslist＋免費攝影</div>
+          </article>
+
+          <article class="h-col">
+            <div class="h-col-num">03.</div>
+            <h3>設計變現模式</h3>
+            <p>在不傷害網路效應前提下設計交易抽成、廣告或加值工具，切忌陷入無止盡補貼的燒錢黑洞。</p>
+            <div class="h-col-tag">警示：Uber 2017 年單年虧 45 億美元</div>
+          </article>
+
+          <article class="h-col">
+            <div class="h-col-num">04.</div>
+            <h3>建立生態系規則</h3>
+            <p>以端到端與模組化架構把核心留乾淨，明確界定 API 開放邊界、評分與交易保障，維繫夥伴信任。</p>
+            <div class="h-col-tag">核心功能：拉引 Pull・促進・媒合 Match</div>
+          </article>
+        </div>
+        <div class="slide-footnote">來源：wiki/concepts/core-interaction-and-architecture.md、platform-types-innovation-transaction-hybrid.md；Parker et al. p.31–42；Cusumano et al. p.54–77</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 06｜版型 7a：左階梯長條圖（純 SVG）＋右重點解讀頁（平台三分法與 20 年實證）
+           ================================================================= -->
+      <section class="slide layout-chart-left glow-diag-bl" data-title="基礎原理 04｜創新／交易／混合平台實證" aria-hidden="true">
+        <div class="chart-body">
+          <div class="chart-card">
+            <div>
+              <div class="diagram-caption">
+                <span>Forbes Global 2000 實證（1995–2015 中位數）</span>
+                <span class="pill-tag">市值／營收倍數</span>
+              </div>
+              <svg class="diagram-svg" viewBox="0 0 560 278" fill="none" role="img" aria-label="交易平台、全部平台、創新平台與非平台市值營收倍數對照長條圖">
+                <!-- 網格線：左起 x=156，每 2x = 85px，8x = 340px (到 x=496) -->
+                <line x1="156" y1="18" x2="156" y2="232" stroke="#1B4965" stroke-opacity="0.28" stroke-width="1.2"/>
+                <line x1="241" y1="18" x2="241" y2="232" stroke="#1B4965" stroke-opacity="0.10" stroke-dasharray="4 4"/>
+                <line x1="326" y1="18" x2="326" y2="232" stroke="#1B4965" stroke-opacity="0.10" stroke-dasharray="4 4"/>
+                <line x1="411" y1="18" x2="411" y2="232" stroke="#1B4965" stroke-opacity="0.10" stroke-dasharray="4 4"/>
+                <line x1="496" y1="18" x2="496" y2="232" stroke="#1B4965" stroke-opacity="0.10" stroke-dasharray="4 4"/>
+
+                <!-- Bar 1: 交易平台 7.07x (7.07 * 42.5 = 300.5) -->
+                <text x="146" y="50" text-anchor="end" fill="#1B4965" font-size="14" font-weight="800">交易平台（25 家）</text>
+                <rect x="156" y="28" width="300" height="34" rx="8" fill="#3A85AC"/>
+                <text x="466" y="50" fill="#1B4965" font-size="15" font-weight="800">7.07x</text>
+
+                <!-- Bar 2: 全部數位平台 5.35x (5.35 * 42.5 = 227.4) -->
+                <text x="146" y="102" text-anchor="end" fill="#1B4965" font-size="14" font-weight="700">全部平台（43 家）</text>
+                <rect x="156" y="80" width="227" height="34" rx="8" fill="#6BA3C2"/>
+                <text x="393" y="102" fill="#1B4965" font-size="15" font-weight="800">5.35x</text>
+
+                <!-- Bar 3: 創新平台 4.19x (4.19 * 42.5 = 178.1) -->
+                <text x="146" y="154" text-anchor="end" fill="#1B4965" font-size="14" font-weight="700">創新平台（18 家）</text>
+                <rect x="156" y="132" width="178" height="34" rx="8" fill="#94BDD2"/>
+                <text x="344" y="154" fill="#1B4965" font-size="15" font-weight="800">4.19x</text>
+
+                <!-- Bar 4: 非平台對照組 1.94x (1.94 * 42.5 = 82.5) -->
+                <text x="146" y="206" text-anchor="end" fill="#5C8198" font-size="14" font-weight="700">非平台對照（100 家）</text>
+                <rect x="156" y="184" width="82" height="34" rx="8" fill="#BCD9E6"/>
+                <text x="248" y="206" fill="#3B647D" font-size="15" font-weight="800">1.94x</text>
+
+                <!-- X 軸刻度 -->
+                <text x="156" y="252" text-anchor="middle" fill="#5C8198" font-size="12">0x</text>
+                <text x="241" y="252" text-anchor="middle" fill="#5C8198" font-size="12">2x</text>
+                <text x="326" y="252" text-anchor="middle" fill="#5C8198" font-size="12">4x</text>
+                <text x="411" y="252" text-anchor="middle" fill="#5C8198" font-size="12">6x</text>
+                <text x="496" y="252" text-anchor="middle" fill="#5C8198" font-size="12">8x</text>
+                <text x="326" y="272" text-anchor="middle" fill="#3A85AC" font-size="12" font-weight="700">營收年成長率中位數：交易 29% ＞ 創新 13% ＞ 非平台 9%</text>
+              </svg>
+            </div>
+
+            <div class="kpi-strip">
+              <div class="kpi-box">
+                <div class="kpi-val">21% vs. 12%</div>
+                <div class="kpi-label">營業利潤率高近倍，員工人數卻少約一半（9,872 vs. 19,000 人）</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-val">僅 17% 存活</div>
+                <div class="kpi-label">252 家平台僅 43 家獨立上市，209 家陣亡退場</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span>PART 1 平台三分法</div>
+            <h2 class="slide-title-sm">創新、交易與混合平台：<br>高獲利背後的殘酷真相</h2>
+
+            <div class="insight-list">
+              <div class="insight-item">
+                <h3>創新平台（Innovation Platforms）</h3>
+                <p>提供共通技術積木與 API（如 Windows、iOS、AWS），讓第三方開發互補品；研發占比高（13%）、技術門檻極高。</p>
+              </div>
+              <div class="insight-item">
+                <h3>交易平台（Transaction Platforms）</h3>
+                <p>作為線上媒合市集（如 Uber、Airbnb、Amazon Marketplace），成長更快、估值倍數達 7.07x，占獨角獸 60%–70%。</p>
+              </div>
+              <div class="insight-item">
+                <h3>混合平台（Hybrid Platforms）最強王者</h3>
+                <p>同時整合創新＋交易（如 iOS＋App Store）。全球七大巨頭全為混合平台，2018 年底巔峰市值合計近 <strong>5 兆美元</strong>。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footnote">來源：wiki/concepts/platform-types-innovation-transaction-hybrid.md、wiki/sources/cusumano-2019-business-of-platforms.md, p.13, p.20–23, p.77</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 07｜版型 2：左編號文字＋右圓角視覺圖解頁（難題一上：Linux 2004）
+           ================================================================= -->
+      <section class="slide layout-split-diagram glow-diag-tr" data-title="難題一（上）｜Linux 開放 vs. 封閉戰場分化" aria-hidden="true">
+        <div class="split-body">
+          <div class="split-left">
+            <div class="eyebrow"><span class="eyebrow-dot"></span>PART 2 實戰難題一：開放還是封閉？</div>
+            <h2 class="slide-title">Linux 市集模式，<br>為何稱霸伺服器卻卡關桌面？</h2>
+
+            <div class="num-points">
+              <div class="num-point">
+                <div class="big-num">01</div>
+                <div>
+                  <h3>GPL 與「市集模式」引爆性價比革命</h3>
+                  <p>透過 <strong>GNU GPL（著佐權 Copyleft）</strong>防止衍生品閉源，並靠全球志願者平行除錯（市集 Bazaar vs. 大教堂 Cathedral）；Linux 伺服器性價比達 Sun 的 <strong>4–15 倍</strong>。</p>
+                </div>
+              </div>
+
+              <div class="num-point">
+                <div class="big-num">02</div>
+                <div>
+                  <h3>伺服器狂飆，但桌面遭網路效應封鎖</h3>
+                  <p>美國大企業採用率 4 年衝至 <strong>39%</strong>（Amazon 年省 1,700 萬美元）；但桌面端缺乏商業應用，遭 Windows 憑強跨邊網路效應牢控 <strong>95%–96%</strong> 市占。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="diagram-card">
+            <div class="diagram-caption">
+              <span>2001–2006 全球伺服器安裝基數年複合成長率（CAGR）</span>
+              <span class="pill-tag">Linux 成長冠軍 +24.7%</span>
+            </div>
+            <svg class="diagram-svg" viewBox="0 0 600 400" fill="none" role="img" aria-label="Linux 與競爭作業系統伺服器成長率與市場市占對照圖">
+              <!-- 上半：正負發散長條圖（零軸 x=275，1% = 8.4px） -->
+              <rect x="10" y="6" width="580" height="222" rx="14" fill="#F7FAFC" stroke="#DCEAF1" stroke-width="1.2"/>
+              <line x1="275" y1="24" x2="275" y2="210" stroke="#1B4965" stroke-width="1.6"/>
+              <text x="275" y="223" text-anchor="middle" fill="#5C8198" font-size="11.5" font-weight="700">0%（零成長軸）</text>
+
+              <!-- Linux +24.7% -> 207px -->
+              <text x="263" y="54" text-anchor="end" fill="#1B4965" font-size="14" font-weight="800">Linux（開源）</text>
+              <rect x="275" y="34" width="207" height="30" rx="6" fill="#3A85AC"/>
+              <text x="492" y="54" fill="#1B4965" font-size="15" font-weight="800">+24.7%</text>
+
+              <!-- Windows +15.2% -> 128px -->
+              <text x="263" y="99" text-anchor="end" fill="#1B4965" font-size="14" font-weight="700">Windows</text>
+              <rect x="275" y="79" width="128" height="30" rx="6" fill="#6BA3C2"/>
+              <text x="413" y="99" fill="#1B4965" font-size="15" font-weight="800">+15.2%</text>
+
+              <!-- Unix -5.0% -> 42px left (x=233) -->
+              <text x="287" y="144" fill="#3B647D" font-size="14" font-weight="700">Unix（含 Solaris）</text>
+              <rect x="233" y="124" width="42" height="30" rx="6" fill="#94BDD2"/>
+              <text x="223" y="144" text-anchor="end" fill="#3B647D" font-size="14" font-weight="800">-5.0%</text>
+
+              <!-- NetWare -12.5% -> 105px left (x=170) -->
+              <text x="287" y="189" fill="#5C8198" font-size="14" font-weight="700">Novell NetWare</text>
+              <rect x="170" y="169" width="105" height="30" rx="6" fill="#BCD9E6"/>
+              <text x="160" y="189" text-anchor="end" fill="#5C8198" font-size="14" font-weight="800">-12.5%</text>
+
+              <!-- 下半：伺服器 vs. 桌面戰場落差 -->
+              <rect x="10" y="244" width="580" height="148" rx="14" fill="#FFFFFF" stroke="#BCD9E6" stroke-width="1.5"/>
+              <text x="28" y="271" fill="#1B4965" font-size="14" font-weight="800">雙戰場市占對照（2004）</text>
+
+              <!-- 伺服器條 -->
+              <text x="28" y="302" fill="#3B647D" font-size="13" font-weight="700">伺服器安裝用戶（Linux 突破）</text>
+              <rect x="28" y="311" width="540" height="22" rx="11" fill="#E6F0F5"/>
+              <rect x="28" y="311" width="200" height="22" rx="11" fill="#3A85AC"/>
+              <text x="128" y="326" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="800">Linux 37%</text>
+              <text x="560" y="326" text-anchor="end" fill="#5C8198" font-size="12" font-weight="700">美國大企業採用率 39%</text>
+
+              <!-- 桌面條 -->
+              <text x="28" y="357" fill="#3B647D" font-size="13" font-weight="700">個人桌面市場（贏者全拿鎖定）</text>
+              <rect x="28" y="366" width="540" height="22" rx="11" fill="#E6F0F5"/>
+              <rect x="28" y="366" width="516" height="22" rx="11" fill="#1B4965"/>
+              <text x="286" y="381" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="800">Microsoft Windows 95%–96%</text>
+            </svg>
+          </div>
+        </div>
+        <div class="slide-footnote">來源：wiki/cases/linux-2004-open-vs-closed.md、wiki/sources/hbs-linux-2004.md, p.2–8, p.14–15, p.23</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 08｜版型 4：整面淺霧藍圓角大底板＋中軸垂直時間線頁（難題一下）
+           ================================================================= -->
+      <section class="slide layout-mist-timeline glow-soft-edge" data-title="難題一（下）｜免費核心獲利與動態開放光譜" aria-hidden="true">
+        <div class="mist-panel">
+          <div class="mist-left">
+            <div class="eyebrow"><span class="eyebrow-dot"></span>PART 2 難題一策略解方</div>
+            <h2 class="slide-title-sm">核心免費誰賺錢？<br>開放是一條動態光譜</h2>
+            <p class="lead-copy">
+              作業系統商品化後，毛利從套裝軟體（50%–80%）驟降至服務（≤20%）。企業不能只問「開不開放」，而是要設計<strong>靠哪一層互補資產變現</strong>與<strong>動態微調控制權</strong>。
+            </p>
+            <div class="mist-mini-card">
+              <h4>Parker 四種平台開放管理結構</h4>
+              <p style="font-size:13.5px; line-height:1.55; color:#1B4965;">
+                <strong>專有</strong>（Apple iOS）→ <strong>授權</strong>（Windows）→ <strong>合資</strong>（Orbitz）→ <strong>共享</strong>（Linux）。同業常藉不同開放度展開差異化競爭。
+              </p>
+            </div>
+          </div>
+
+          <div class="v-timeline-axis" aria-hidden="true">
+            <div class="v-node"></div>
+            <div class="v-node"></div>
+            <div class="v-node"></div>
+          </div>
+
+          <div class="v-timeline-items">
+            <article class="v-item">
+              <div class="v-num">01</div>
+              <div>
+                <h3>通才互補者獲利遠勝專精廠商</h3>
+                <p>IBM 靠免費 Linux 帶動硬體與顧問，伺服器年銷 <strong>5.52 億美元</strong>；反觀專精龍頭 Red Hat 總營收僅 <strong>1.261 億美元</strong>，漲訂閱費恐失低價優勢。</p>
+              </div>
+            </article>
+
+            <article class="v-item">
+              <div class="v-num">02</div>
+              <div>
+                <h3>開源社群的「制度化治理」升級</h3>
+                <p>Torvalds 副官分層與名聲誘因（egoboo）穩住品質；遇 SCO 訴訟後迅速導入來源證明與 OSDL <strong>1,000 萬美元</strong>法律防禦基金。</p>
+              </div>
+            </article>
+
+            <article class="v-item">
+              <div class="v-num">03</div>
+              <div>
+                <h3>封閉霸主的「選擇性開放」防禦</h3>
+                <p>Sun 綁死 Solaris＋Sparc 兩面受敵；Microsoft 以彈性定價＋<strong>SSI／GSP 選擇性共享原始碼</strong>＋整合創新守住防線。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="slide-footnote">來源：wiki/cases/linux-2004-open-vs-closed.md、platform-openness-and-open-source.md；HBS Linux p.10–16；Platform_Revolution.pdf p.86–98</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 09｜版型 7a：左階梯長條圖（純 SVG）＋右重點解讀頁（難題二上：Marriott）
+           ================================================================= -->
+      <section class="slide layout-chart-left glow-diag-tr" data-title="難題二（上）｜Marriott 遭 OTA 與 Airbnb 夾擊" aria-hidden="true">
+        <div class="chart-body">
+          <div class="chart-card">
+            <div>
+              <div class="diagram-caption">
+                <span>2017 年市值／估值比較（億美元）</span>
+                <span class="pill-tag">平台市值反超傳統飯店</span>
+              </div>
+              <svg class="diagram-svg" viewBox="0 0 560 318" fill="none" role="img" aria-label="2017 年 Priceline、Marriott、Airbnb、Expedia、Hilton 市值對照與紐約市 Airbnb 彈性供給圖">
+                <!-- Chart A: 市值長條（左起 x=116，100億 = 36px，1000億 = 360px） -->
+                <text x="106" y="34" text-anchor="end" fill="#1B4965" font-size="13.5" font-weight="800">Priceline (OTA)</text>
+                <rect x="116" y="16" width="356" height="24" rx="6" fill="#1B4965"/>
+                <text x="480" y="33" fill="#1B4965" font-size="13.5" font-weight="800">990 億</text>
+
+                <text x="106" y="68" text-anchor="end" fill="#1B4965" font-size="13.5" font-weight="800">Marriott</text>
+                <rect x="116" y="50" width="140" height="24" rx="6" fill="#3A85AC"/>
+                <text x="265" y="67" fill="#1B4965" font-size="13.5" font-weight="800">390 億</text>
+
+                <text x="106" y="102" text-anchor="end" fill="#1B4965" font-size="13.5" font-weight="800">Airbnb</text>
+                <rect x="116" y="84" width="112" height="24" rx="6" fill="#6BA3C2"/>
+                <text x="237" y="101" fill="#1B4965" font-size="13.5" font-weight="800">310 億（房源近 3 倍）</text>
+
+                <text x="106" y="136" text-anchor="end" fill="#3B647D" font-size="13.5" font-weight="700">Expedia (OTA)</text>
+                <rect x="116" y="118" width="83" height="24" rx="6" fill="#94BDD2"/>
+                <text x="208" y="135" fill="#3B647D" font-size="13.5" font-weight="700">230 億</text>
+
+                <text x="106" y="170" text-anchor="end" fill="#5C8198" font-size="13.5" font-weight="700">Hilton</text>
+                <rect x="116" y="152" width="72" height="24" rx="6" fill="#BCD9E6"/>
+                <text x="197" y="169" fill="#5C8198" font-size="13.5" font-weight="700">200 億</text>
+
+                <!-- 分隔線 -->
+                <line x1="12" y1="196" x2="548" y2="196" stroke="#DCEAF1" stroke-width="1.5"/>
+
+                <!-- Chart B: 紐約市 Airbnb 壓縮之夜供給彈性 -->
+                <text x="14" y="220" fill="#1B4965" font-size="13.5" font-weight="800">2016 紐約市 Airbnb 單日售出房源（直擊「壓縮之夜」）</text>
+
+                <text x="106" y="254" text-anchor="end" fill="#3B647D" font-size="13" font-weight="700">淡季 1/10</text>
+                <rect x="116" y="236" width="136" height="26" rx="6" fill="#94BDD2"/>
+                <text x="262" y="254" fill="#3B647D" font-size="13" font-weight="700">2,487 間（飯店均價 $148）</text>
+
+                <text x="106" y="294" text-anchor="end" fill="#1B4965" font-size="13" font-weight="800">跨年夜 12/31</text>
+                <rect x="116" y="276" width="354" height="26" rx="6" fill="#3A85AC"/>
+                <text x="478" y="294" fill="#1B4965" font-size="13.5" font-weight="800">6,475 間</text>
+                <text x="293" y="294" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="800">+160% 尖峰彈性補位（飯店均價 $418）</text>
+              </svg>
+            </div>
+
+            <div class="kpi-strip">
+              <div class="kpi-box">
+                <div class="kpi-val">73 億美元</div>
+                <div class="kpi-label">OTA 雙雄 2016 年廣告費，為所有連鎖飯店總和兩倍</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-val">4.9% → 8%</div>
+                <div class="kpi-label">壓縮之夜僅占 4.9% 晚數，卻因漲價 35%+ 貢獻近 8% 營收</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span>PART 3 實戰難題二：管道遇上平台</div>
+            <h2 class="slide-title-sm">Marriott 的兩面夾擊：<br>結構性不對稱在哪裡？</h2>
+
+            <div class="insight-list">
+              <div class="insight-item">
+                <h3>輕資產龍頭，但實體供給僵固</h3>
+                <p>Marriott 以管理與加盟締造 <strong>45%</strong> 營業利益率、逾 6,000 家物業，但興建一座新飯店仍需 <strong>3–5 年</strong>。</p>
+              </div>
+              <div class="insight-item">
+                <h3>夾擊一｜OTA 壟斷搜尋入口</h3>
+                <p>Expedia 與 Priceline 抽成 <strong>10%–30%</strong>，藉再中介化掌控比價流量，OTA 訂房占比由 10.1% 升至 13.3%。</p>
+              </div>
+              <div class="insight-item">
+                <h3>夾擊二｜Airbnb 零資產彈性補位</h3>
+                <p>靠搜尋演算法、託管支付與雙向評價，在不蓋房下搶食飯店最賺錢的「<strong>壓縮之夜（Compression Nights）</strong>」與年輕休閒客。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footnote">來源：wiki/cases/marriott-pipeline-vs-platform.md、wiki/sources/hbs-marriott-next-90-years.md, p.3–9, p.16, p.24, p.26, p.28</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 10｜版型 3：左引言＋右三階漸層色條清單頁（難題二下：反擊與 Build/Buy/Belong）
+           ================================================================= -->
+      <section class="slide layout-three-bars glow-diag-bl" data-title="難題二（下）｜Marriott 三招反制與 Build/Buy/Belong" aria-hidden="true">
+        <div class="bars-body">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span>PART 3 難題二策略解方</div>
+            <h2 class="slide-title">傳統龍頭怎麼反擊？<br>混搭 Build／Buy／Belong</h2>
+            <p class="lead-copy">
+              Cusumano 等人指出，傳統企業面對平台衝擊有三條路徑：<strong>加入（Belong）</strong>、<strong>併購（Buy）</strong>與<strong>自建（Build）</strong>。
+            </p>
+            <div class="accent-quote">
+              Marriott 沒有盲目抄襲 Airbnb，而是拉高旅客<strong>多棲（Multihoming）</strong>比價成本，把 1 億會員升級為直連體驗生態；但仍須克服分散式 IT 與加盟主協調摩擦。
+            </div>
+          </div>
+
+          <div class="three-bars-stack">
+            <article class="step-bar tier-1">
+              <div class="step-badge">01</div>
+              <div>
+                <h3>併購擴大議價籌碼（Buy）</h3>
+                <p>2016 年斥資 <strong>136 億美元</strong>併購 Starwood，集結 30 個品牌、110–120 萬間客房與破 <strong>1 億</strong>忠誠會員，強化對 OTA 的佣金談判籌碼。</p>
+              </div>
+            </article>
+
+            <article class="step-bar tier-2">
+              <div class="step-badge">02</div>
+              <div>
+                <h3>會員直訂鎖客，防範 Belong 反噬</h3>
+                <p>推出 Member Rates 保證官網最低價，並規定「<strong>透過 OTA 訂房完全不給點數</strong>」，牢牢守住逾 50% 直訂晚數與占 <strong>80%</strong> 客房晚數的商務核心客。</p>
+              </div>
+            </article>
+
+            <article class="step-bar tier-3">
+              <div class="step-badge">03</div>
+              <div>
+                <h3>延伸體驗生態＋實境實驗（Buy＋Build）</h3>
+                <p>投資在地體驗平台 <strong>PlacePass</strong>（180 國逾 15 萬項活動）抗衡 Airbnb Experiences，並設 <strong>MBeta</strong> 實境測試飯店用量化 ROI 說服加盟業主跟進。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="slide-footnote">來源：wiki/cases/marriott-pipeline-vs-platform.md、incumbent-response-build-buy-belong.md；HBS Marriott p.4, p.8, p.11–13；Cusumano et al. p.113–138</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 11｜版型 4：整面淺霧藍圓角大底板＋中軸垂直時間線頁（難題三理論：Adner 三大風險）
+           ================================================================= -->
+      <section class="slide layout-mist-timeline glow-soft-edge" data-title="難題三（理論）｜創新生態系三大風險（Adner）" aria-hidden="true">
+        <div class="mist-panel">
+          <div class="mist-left">
+            <div class="eyebrow"><span class="eyebrow-dot"></span>PART 4 實戰難題三：生態系風險</div>
+            <h2 class="slide-title-sm">自己做得完美，<br>為何還是可能失敗？</h2>
+            <p class="lead-copy">
+              <strong>創新生態系統（Innovation Ecosystem）</strong>如同「法拉利需要汽油與高速公路」。Adner（2006）警告：<strong>沒有壞數字，只有壞預期</strong>。
+            </p>
+            <div class="mist-mini-card">
+              <h4>相依風險算例：機率是「相乘」不是平均！</h4>
+              <svg viewBox="0 0 340 88" width="100%" fill="none" role="img" aria-label="四家供應商各 90% 聯合機率 66%，單一弱環 20% 驟降為 15%">
+                <text x="0" y="16" fill="#1B4965" font-size="12" font-weight="700">4 夥伴各 90% 成功（0.9⁴）</text>
+                <rect x="0" y="23" width="240" height="16" rx="8" fill="#E3EFF4"/>
+                <rect x="0" y="23" width="158" height="16" rx="8" fill="#3A85AC"/>
+                <text x="250" y="36" fill="#1B4965" font-size="13.5" font-weight="800">66%</text>
+
+                <text x="0" y="60" fill="#1B4965" font-size="12" font-weight="700">只要 1 家降至 20%（0.9³ × 0.2）</text>
+                <rect x="0" y="67" width="240" height="16" rx="8" fill="#E3EFF4"/>
+                <rect x="0" y="67" width="36" height="16" rx="8" fill="#1B4965"/>
+                <text x="250" y="80" fill="#1B4965" font-size="13.5" font-weight="800">15%</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="v-timeline-axis" aria-hidden="true">
+            <div class="v-node"></div>
+            <div class="v-node"></div>
+            <div class="v-node"></div>
+          </div>
+
+          <div class="v-timeline-items">
+            <article class="v-item">
+              <div class="v-num">01</div>
+              <div>
+                <h3>執行風險（Initiative Risk）</h3>
+                <p>企業自身能否按時、按規格做出產品的傳統風險。決定哪些技術留內部做、哪些交給夥伴分擔。</p>
+              </div>
+            </article>
+
+            <article class="v-item">
+              <div class="v-num">02</div>
+              <div>
+                <h3>相依風險（Interdependence Risk）</h3>
+                <p>互補創新者必須同時就緒，成功機率採「<strong>機率相乘</strong>」。如 1990s 高畫質電視（HDTV）主機早做好，卻因廣播標準與壓縮技術延宕逾 10 年。</p>
+              </div>
+            </article>
+
+            <article class="v-item">
+              <div class="v-num">03</div>
+              <div>
+                <h3>整合風險（Integration Risk）</h3>
+                <p>下游每層通路採用時間採「<strong>週期相加</strong>」，且每關收益皆須大於成本。如平面顯示器總上市需 <strong>20 個月</strong>，自身研發砍半僅加速 20%。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="slide-footnote">來源：wiki/concepts/innovation-ecosystem.md、ecosystem-risks.md、ecosystem-mapping.md；Adner (2006) W11_2006_Adner.pdf, p.1, p.3–7</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 12｜版型 2：左編號文字＋右圓角視覺圖解頁（難題三實戰：Philips HSDP 減字精簡版）
+           ================================================================= -->
+      <section class="slide layout-split-diagram glow-diag-tr" data-title="難題三（實戰）｜Philips HSDP 多重生態系定位" aria-hidden="true">
+        <div class="split-body">
+          <div class="split-left">
+            <div class="eyebrow"><span class="eyebrow-dot"></span>PART 4 難題三實戰定位</div>
+            <h2 class="slide-title">多重生態系站位：<br>Philips HSDP 如何分工競合？</h2>
+
+            <div class="num-points">
+              <div class="num-point">
+                <div class="big-num">01</div>
+                <div>
+                  <h3>依能力精準分層（Jacobides 三角色）</h3>
+                  <p>不必處處當<strong>主導者（Orchestrator）</strong>：Philips 在臨床數據層主導、底層雲端結盟當<strong>夥伴（Partner）</strong>、消費端相容整合，避開 GE Predix 自建雲端陷阱。</p>
+                </div>
+              </div>
+
+              <div class="num-point">
+                <div class="big-num">02</div>
+                <div>
+                  <h3>開放度張力與臨床實績破冰</h3>
+                  <p>HSDP 主打開放 API，卻因醫療法規被 Jacobides 歸為<strong>封閉式（Closed）</strong>治理。Philips（2014 營收 <strong>214 億歐元</strong>）以試點<strong>急診降 67%</strong>、年省 <strong>27,000 美元</strong>破冰。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="diagram-card tint-blue">
+            <div class="diagram-caption">
+              <span>Philips HSDP 三層多重生態系架構圖</span>
+              <span class="pill-tag">Access 開放度 × Attachment 依附度</span>
+            </div>
+            <svg class="diagram-svg" viewBox="0 0 600 442" fill="none" role="img" aria-label="Philips HSDP 消費相容層、臨床主導核心層與雲端夥伴結盟層三層架構圖">
+              <defs>
+                <marker id="arrP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0 1 L10 5 L0 9 Z" fill="#3A85AC"/>
+                </marker>
+              </defs>
+
+              <!-- 頂層：消費健康生態系 -->
+              <rect x="14" y="10" width="572" height="88" rx="16" fill="#FFFFFF" stroke="#62B6CB" stroke-width="1.6" stroke-dasharray="6 4"/>
+              <rect x="30" y="24" width="142" height="24" rx="12" fill="#E6F3F7"/>
+              <text x="101" y="40" text-anchor="middle" fill="#3A85AC" font-size="11.5" font-weight="800">消費層｜相容整合</text>
+              <text x="184" y="40" fill="#1B4965" font-size="14" font-weight="800">不硬搶消費入口，開放匯入居家穿戴數據</text>
+              <rect x="30" y="56" width="156" height="30" rx="8" fill="#F2F7FA" stroke="#BCD9E6"/>
+              <text x="108" y="75" text-anchor="middle" fill="#1B4965" font-size="12.5" font-weight="700">Apple HealthKit</text>
+              <rect x="200" y="56" width="146" height="30" rx="8" fill="#F2F7FA" stroke="#BCD9E6"/>
+              <text x="273" y="75" text-anchor="middle" fill="#1B4965" font-size="12.5" font-weight="700">FitBit 等穿戴裝置</text>
+              <rect x="360" y="56" width="210" height="30" rx="8" fill="#F2F7FA" stroke="#BCD9E6"/>
+              <text x="465" y="75" text-anchor="middle" fill="#3B647D" font-size="12" font-weight="700">第三方專科 App（懷孕／心衰）</text>
+
+              <!-- 連接箭頭 1 -->
+              <line x1="220" y1="100" x2="220" y2="128" stroke="#3A85AC" stroke-width="2" marker-end="url(#arrP)"/>
+              <line x1="380" y1="128" x2="380" y2="100" stroke="#3A85AC" stroke-width="2" marker-end="url(#arrP)"/>
+              <text x="300" y="119" text-anchor="middle" fill="#3A85AC" font-size="11.5" font-weight="700">開放 API 雙向串聯</text>
+
+              <!-- 中層：HSDP 臨床核心 -->
+              <rect x="14" y="132" width="572" height="178" rx="18" fill="#BCD9E6" stroke="#1B4965" stroke-width="1.8"/>
+              <rect x="30" y="146" width="194" height="24" rx="12" fill="#1B4965"/>
+              <text x="127" y="162" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="800">核心層｜主導者 Orchestrator</text>
+              <text x="236" y="162" fill="#1B4965" font-size="14.5" font-weight="800">Philips HealthSuite Digital Platform (HSDP)</text>
+
+              <!-- 健康連續體 6 階段 -->
+              <text x="32" y="191" fill="#1B4965" font-size="12" font-weight="800">健康連續體 6 階段：</text>
+              <rect x="148" y="176" width="64" height="22" rx="11" fill="#FFFFFF"/><text x="180" y="191" text-anchor="middle" fill="#1B4965" font-size="11" font-weight="700">健康生活</text>
+              <rect x="218" y="176" width="52" height="22" rx="11" fill="#FFFFFF"/><text x="244" y="191" text-anchor="middle" fill="#1B4965" font-size="11" font-weight="700">預防</text>
+              <rect x="276" y="176" width="52" height="22" rx="11" fill="#FFFFFF"/><text x="302" y="191" text-anchor="middle" fill="#1B4965" font-size="11" font-weight="700">診斷</text>
+              <rect x="334" y="176" width="52" height="22" rx="11" fill="#FFFFFF"/><text x="360" y="191" text-anchor="middle" fill="#1B4965" font-size="11" font-weight="700">治療</text>
+              <rect x="392" y="176" width="52" height="22" rx="11" fill="#FFFFFF"/><text x="418" y="191" text-anchor="middle" fill="#1B4965" font-size="11" font-weight="700">復原</text>
+              <rect x="450" y="176" width="64" height="22" rx="11" fill="#FFFFFF"/><text x="482" y="191" text-anchor="middle" fill="#1B4965" font-size="11" font-weight="700">居家照護</text>
+
+              <!-- 核心籌碼 + EMR 競合 -->
+              <rect x="30" y="210" width="262" height="84" rx="12" fill="#FFFFFF"/>
+              <text x="44" y="232" fill="#3A85AC" font-size="12" font-weight="800">臨床數據護城河與冷啟動</text>
+              <text x="44" y="253" fill="#1B4965" font-size="13" font-weight="700">• 逾 18 PB 影像・監測 2.75 億病患</text>
+              <text x="44" y="274" fill="#3B647D" font-size="12.5">• 自建首批 FDA 核准臨床 App</text>
+
+              <rect x="306" y="210" width="264" height="84" rx="12" fill="#EDF5F9" stroke="#3A85AC" stroke-dasharray="4 3"/>
+              <text x="320" y="232" fill="#1B4965" font-size="12" font-weight="800">↔ 醫院舊系統競合（高整合風險）</text>
+              <text x="320" y="253" fill="#1B4965" font-size="13" font-weight="700">• Epic／Cerner 電子病歷（EMR）</text>
+              <text x="320" y="274" fill="#3B647D" font-size="12.5">• 主打互補優化，不強行取代舊 IT</text>
+
+              <!-- 連接箭頭 2 -->
+              <line x1="300" y1="312" x2="300" y2="338" stroke="#1B4965" stroke-width="2" marker-end="url(#arrP)"/>
+              <text x="314" y="330" fill="#1B4965" font-size="11.5" font-weight="700">底層算力外包結盟</text>
+
+              <!-- 底層：雲端夥伴層 -->
+              <rect x="14" y="342" width="572" height="90" rx="16" fill="#3A85AC"/>
+              <rect x="30" y="355" width="166" height="24" rx="12" fill="#1B4965"/>
+              <text x="113" y="371" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="800">底層｜結盟夥伴 Partner</text>
+              <text x="208" y="371" fill="#FFFFFF" font-size="13.5" font-weight="700">聚焦醫療強項，借力三大科技巨頭</text>
+
+              <rect x="30" y="388" width="168" height="32" rx="8" fill="#FFFFFF"/>
+              <text x="114" y="408" text-anchor="middle" fill="#1B4965" font-size="12.5" font-weight="800">AWS（IaaS 彈性算力）</text>
+              <rect x="214" y="388" width="172" height="32" rx="8" fill="#FFFFFF"/>
+              <text x="300" y="408" text-anchor="middle" fill="#1B4965" font-size="12.5" font-weight="800">Pivotal（PaaS 兼容）</text>
+              <rect x="402" y="388" width="168" height="32" rx="8" fill="#FFFFFF"/>
+              <text x="486" y="408" text-anchor="middle" fill="#1B4965" font-size="12.5" font-weight="800">Salesforce（CRM）</text>
+            </svg>
+          </div>
+        </div>
+        <div class="slide-footnote">來源：wiki/cases/philips-healthsuite-multi-ecosystem.md、ecosystem-roles-and-multi-ecosystem.md；HBS Philips p.2–8；Jacobides (2021) p.4–5</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 13｜版型 7b：整面淺霧藍圓角置中總結頁（四大核心心法）
+           ================================================================= -->
+      <section class="slide layout-mist-summary glow-soft-edge" data-title="全篇總結｜新手必帶走的四大策略心法" aria-hidden="true">
+        <div class="summary-panel">
+          <div class="summary-header">
+            <div class="eyebrow"><span class="eyebrow-dot"></span>KEY TAKEAWAYS 核心總結</div>
+            <h2 class="slide-title-sm">新手必帶走的四大平台策略心法</h2>
+            <p class="lead-copy" style="color: rgba(27,73,101,0.88); font-size:15.5px;">
+              平台與生態系沒有萬用公式，但所有高勝率決策都圍繞這四條黃金法則：
+            </p>
+          </div>
+
+          <div class="summary-grid">
+            <article class="summary-card">
+              <div class="summary-num">01</div>
+              <div>
+                <h3>先磨透核心互動，別迷信光靠人數就會贏</h3>
+                <p>網路效應只是起點；唯有同時築起<strong>高多棲成本</strong>、<strong>差異化利基</strong>與高品質<strong>策展</strong>，才能邁向贏者通吃多數而非陷入補貼戰。</p>
+              </div>
+            </article>
+
+            <article class="summary-card">
+              <div class="summary-num">02</div>
+              <div>
+                <h3>開放度是動態光譜，坐大更要守治理自律</h3>
+                <p>核心免費須靠互補資產變現（IBM 挺 Linux）；平台坐大後面臨反托拉斯與信任反彈，須主動自我監理。</p>
+              </div>
+            </article>
+
+            <article class="summary-card">
+              <div class="summary-num">03</div>
+              <div>
+                <h3>管道反擊善用 Build／Buy／Belong 混搭</h3>
+                <p>傳統企業不必全盤平台化（如 Marriott 併購擴大規模＋直訂會員鎖客＋體驗延伸），但必須正視數據孤島與組織激勵短板。</p>
+              </div>
+            </article>
+
+            <article class="summary-card">
+              <div class="summary-num">04</div>
+              <div>
+                <h3>進軍生態系先畫風險地圖，務實選對角色</h3>
+                <p>算清相依機率相乘與整合週期相加，把資源聚焦自身核心，該結盟就結盟（Philips HSDP），不必凡事當盟主。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="slide-footnote">來源：wiki/concepts/platform-strategy-and-winner-take-all.md、platform-governance.md、incumbent-response-build-buy-belong.md、ecosystem-mapping.md</div>
+      </section>
+
+      <!-- =================================================================
+           Slide 14｜版型 1：結尾頁＋7 份核心文獻總覽
+           ================================================================= -->
+      <section class="slide layout-cover glow-right" data-title="結尾與參考文獻｜7 份 LLM Wiki 來源總覽" aria-hidden="true">
+        <div class="cover-top">
+          <div class="brand-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="4" y="4" width="16" height="16" rx="3" stroke="#1B4965" stroke-width="1.8"/>
+              <line x1="8" y1="9" x2="16" y2="9" stroke="#3A85AC" stroke-width="1.8"/>
+              <line x1="8" y1="13" x2="16" y2="13" stroke="#3A85AC" stroke-width="1.8"/>
+              <line x1="8" y1="17" x2="13" y2="17" stroke="#62B6CB" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <span class="course-label">REFERENCES &amp; LLM WIKI 知識來源總覽</span>
+        </div>
+
+        <div class="ending-grid">
+          <div>
+            <h2 class="ending-title">
+              感謝聆聽<br>
+              <span style="color: var(--blue-04);">從知識庫走向商戰</span>
+            </h2>
+            <p class="lead-copy" style="max-width: 420px; margin-bottom: 24px;">
+              本簡報所有理論定義、個案細節與量化數據，皆 100% 源自本專案建置之 <strong>LLM Wiki（wiki/）</strong>，完整保留原始頁碼供期末專題與課後複習延伸查閱。
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <span class="pill-tag">7 份來源文獻頁</span>
+              <span class="pill-tag">13 篇跨文獻概念頁</span>
+              <span class="pill-tag">3 篇實戰個案頁</span>
+            </div>
+          </div>
+
+          <div class="ref-card">
+            <div class="ref-card-title">
+              <span>核心參考文獻（依 LLM Wiki 匯入順序）</span>
+              <span class="pill-tag">全部 7 份文獻</span>
+            </div>
+            <ol class="ref-list">
+              <li class="ref-item"><span class="ref-num">01</span><div><strong>Adner, R. (2006)</strong>. Match Your Innovation Strategy to Your Innovation Ecosystem. <em>HBR</em>.（生態系三大風險與 7 步驟繪圖）</div></li>
+              <li class="ref-item"><span class="ref-num">02</span><div><strong>Jacobides, M. G. (2021)</strong>. In the Ecosystem Economy, What's Your Strategy? <em>HBR</em>.（策略五問、三角色與開放／依附度）</div></li>
+              <li class="ref-item"><span class="ref-num">03</span><div><strong>Quelch, J. A. &amp; Rodriguez, M. L. (2015)</strong>. Philips Healthcare: Marketing the HealthSuite Digital Platform. <em>HBS 9-515-052</em>.</div></li>
+              <li class="ref-item"><span class="ref-num">04</span><div><strong>Ghemawat, P., Subirana, B. &amp; Pham, C. (2005)</strong>. Linux in 2004. <em>HBS 9-705-407</em>.（開源 GPL、市集模式與互補者分化）</div></li>
+              <li class="ref-item"><span class="ref-num">05</span><div><strong>Farronato, C. &amp; Pisano, G. (2018)</strong>. Marriott International: The Next 90 Years. <em>HBS 9-618-017</em>.（輕資產、OTA 與 Airbnb 反制）</div></li>
+              <li class="ref-item"><span class="ref-num">06</span><div><strong>Parker, G. G., Van Alstyne, M. W. &amp; Choudary, S. P. (2016)</strong>. <em>Platform Revolution</em>. W. W. Norton.（Ch.1–4, 7, 8, 10）</div></li>
+              <li class="ref-item"><span class="ref-num">07</span><div><strong>Cusumano, M. A., Gawer, A. &amp; Yoffie, D. B. (2019)</strong>. <em>The Business of Platforms</em>. Harper Business.（Ch.1–3, 5, 6）</div></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="slide-footnote">專案知識庫：wiki/index.md｜所有數據與頁碼皆經 Node 5 自動化逐頁核對</div>
+      </section>
+
+      <!-- 懸浮翻頁控制列 -->
+      <nav class="deck-nav" aria-label="簡報翻頁控制">
+        <button type="button" class="nav-btn" id="btnPrev" aria-label="上一頁" title="上一頁 (←)">←</button>
+        <button type="button" class="slide-counter" id="btnCounter" title="開啟簡報目錄 (G)">01 / 14</button>
+        <button type="button" class="nav-btn" id="btnNext" aria-label="下一頁" title="下一頁 (→)">→</button>
+        <button type="button" class="nav-btn" id="btnFullscreen" aria-label="切換全螢幕" title="全螢幕 (F)">⛶</button>
+      </nav>
+
+      <!-- 底部進度條 -->
+      <div class="progress-track" aria-hidden="true">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <!-- 簡報目錄快速跳轉抽屜 -->
+      <div class="toc-overlay" id="tocOverlay" aria-hidden="true" role="dialog" aria-label="簡報章節目錄">
+        <div class="toc-modal">
+          <div class="toc-head">
+            <h2>簡報目錄快速跳轉（14 頁）</h2>
+            <button type="button" class="nav-btn" id="btnCloseToc" aria-label="關閉目錄">✕</button>
+          </div>
+          <div class="toc-grid" id="tocGrid"></div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
